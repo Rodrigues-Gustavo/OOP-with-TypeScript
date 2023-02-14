@@ -26,17 +26,29 @@ export class User {
     public getName(): string {
         return this.name
     }
+
+    public getNumber(): number {
+        return 123
+    }
 }
 
 class Manager extends User {
     public getName(): string {
         return `Manager01: ${this.name}`
     }
+
+    public getNumber(): number {
+        return 100
+    }
 }
 
 class Admin extends User {
     public getName(): string {
         return `Adm: ${this.name}`
+    }
+
+    public getNumber(): number {
+        return 80
     }
 }
 
