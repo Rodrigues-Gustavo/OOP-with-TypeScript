@@ -16,4 +16,58 @@ interface Repository {
     destroy(id: ID): boolean
 }
 
+class UserRepositoryMySQL implements Repository {
+    model: any;
+
+    constructor(model: any) {
+        this.model = model
+    }
+
+    findAll(): DefaultResponse[] {
+        throw new Error("Method not implemented.");
+    }
+
+    findById(id: ID): DefaultResponse {
+        throw new Error("Method not implemented.");
+    }
+    insert(data: InputDto): DefaultResponse {
+        throw new Error("Method not implemented.");
+    }
+    update(id: ID, data: InputDto): DefaultResponse {
+        throw new Error("Method not implemented.");
+    }
+    destroy(id: ID): boolean {
+        throw new Error("Method not implemented.");
+    }
+}
+
+class UserRepositoryMongo implements Repository {
+    model: any;
+
+    constructor(model: any) {
+        this.model = model
+    }
+
+    findAll(): DefaultResponse[] {
+        throw new Error("Method not implemented.");
+    }
+
+    findById(id: ID): DefaultResponse {
+        throw new Error("Method not implemented.");
+    }
+    insert(data: InputDto): DefaultResponse {
+        throw new Error("Method not implemented.");
+    }
+    update(id: ID, data: InputDto): DefaultResponse {
+        throw new Error("Method not implemented.");
+    }
+    destroy(id: ID): boolean {
+        throw new Error("Method not implemented.");
+    }
+}
+
+const getAllUsers = (repository: Repository): DefaultResponse[] => {
+    return repository.findAll()
+}
+
 export {}
