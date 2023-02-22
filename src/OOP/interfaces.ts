@@ -32,7 +32,7 @@ class LocationMap implements Location {
     }
 
     getLocation(): string {
-        return 'location'
+        return 'location current'
     }
 }
 
